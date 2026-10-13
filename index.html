@@ -1,28 +1,251 @@
 <!doctype html>
-<html lang="tr">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>ODA</title>
-<meta name="description" content="ODA: küçük, özenli mobil oyunlar ve uygulamalar. Froppy Frog'un stüdyosu.">
-<link rel="stylesheet" href="/style.css">
-</head>
-<body>
-<main>
-<p class="logo">ODA</p>
-<h1>Küçük, özenli oyunlar ve uygulamalar.</h1>
-<p class="muted">Small, carefully made games and apps.</p>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>ODA — Every idea gets its own room</title>
+    <meta name="description" content="ODA is an independent studio in Istanbul building games, mobile apps and web products, and making creative work with AI." />
+    <link rel="canonical" href="https://oda.so/" />
+    <meta name="theme-color" content="#f2f1ed" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="ODA" />
+    <meta property="og:title" content="ODA — Every idea gets its own room" />
+    <meta property="og:description" content="ODA is an independent studio in Istanbul building games, mobile apps and web products, and making creative work with AI." />
+    <meta property="og:url" content="https://oda.so/" />
+    <link rel="icon" href="assets/oda-mark.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="assets/oda-mark-180.png" />
+    <script>try{document.documentElement.className='js'+(localStorage.getItem('oda-rm')==='1'?' rmo':'')}catch(e){document.documentElement.className='js'}</script>
+    <link rel="preload" href="assets/fonts/Figtree-Latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"ODA","url":"https://oda.so/","logo":"https://oda.so/assets/oda-mark-180.png","address":{"@type":"PostalAddress","addressLocality":"Istanbul","addressCountry":"TR"}}</script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
 
-<div class="card">
-<h2 style="margin-top:0">Froppy Frog</h2>
-<p>Batmadan zıpla, sinek kap! Nilüfer yaprakları batmadan bir sonrakine zıpla; tek parmakla oyna, internetsiz de oynanır.</p>
-<a class="btn" href="https://froppyfrog.oda.so">Oyunun sayfası</a>
-<a class="btn" href="https://apps.apple.com/app/id6817477024">App Store</a>
-</div>
+    <!-- The doorway mark (.door-o) is the single brand component: header, hero, CTA, closing and footer. assets/oda-mark.svg is its favicon rendering. -->
+    <header class="hdr">
+      <a class="mark" href="#top" aria-label="ODA home"><span class="door-o sm" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><b></b></span><span aria-hidden="true">da<span class="dot">.</span></span></a>
+      <nav class="hdr-nav" aria-label="Primary"><a href="#rooms">Rooms</a><a href="#index">All rooms</a><a href="#studio">Studio</a></nav>
+      <a class="cta" href="mailto:hello@oda.so"><span class="door-o sm" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><b></b></span><span class="cta-l">Start<span class="cta-x"> a project</span></span><span class="cta-h" aria-hidden="true">hello@oda.so</span><span class="cta-a" aria-hidden="true">↗</span></a>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><i aria-hidden="true"></i><i aria-hidden="true"></i></button>
+    </header>
 
-<footer>
-<p>© 2026 ODA · <a href="https://froppyfrog.oda.so/privacy">Froppy Frog gizlilik</a> · <a href="https://froppyfrog.oda.so/support">Destek</a></p>
-</footer>
-</main>
-</body>
+    <!-- Directory views (menu, room navigator, hero strip, All rooms) are filled from the ROOM blocks by script.js. -->
+    <div class="menu" id="menu" inert>
+      <nav aria-label="Menu">
+        <a class="cta cta-lg" href="mailto:hello@oda.so" data-fit><span class="door-o sm" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><b></b></span><span class="cta-l">Start a project</span><span class="cta-h" aria-hidden="true">hello@oda.so</span><span class="cta-a" aria-hidden="true">↗</span></a>
+        <ol class="dir dir-menu" data-dir="menu" data-fit></ol>
+        <p class="menu-links" data-fit><a href="#index">All rooms</a><a href="#studio">Studio</a></p>
+      </nav>
+    </div>
+    <nav class="dock" aria-label="Rooms"><ol class="dir dir-dock" data-dir="dock"></ol></nav>
+
+    <main id="main">
+      <!-- S0 THRESHOLD -->
+      <section class="hero" id="top" aria-labelledby="hero-h">
+        <!-- Lockup: wordmark plus headline. The headline spans the coral dot's height and sits 0.3 dot diameters right of it; the lockup takes what the copy below leaves. -->
+        <div class="lockup">
+          <div class="hm-od" aria-hidden="true" data-fit><span class="door-o" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><b></b></span>d</div>
+          <div class="hm-a" aria-hidden="true" data-fit>a<span class="dot">.</span></div>
+          <h1 id="hero-h" data-fit><span class="ln"><span class="w"><span style="--k:0">Every</span></span> <span class="w"><span style="--k:1">idea</span></span> <span class="w"><span style="--k:2">gets</span></span></span> <span class="ln"><span class="w"><span style="--k:3">its</span></span> <span class="w"><span style="--k:4">own</span></span> <span class="w"><span style="--k:5">room</span><span class="c">.</span></span></span></h1>
+        </div>
+        <div class="hero-side">
+          <div class="sub" data-fit><p class="sub-1">We build games, mobile apps and web products.</p><p class="sub-2">And we push creative work with AI — from characters to campaigns. <span>Independent studio, Istanbul.</span></p></div>
+          <p class="ctas" data-fit><a class="btn btn-ink" href="#rooms">Walk in <span aria-hidden="true">↓</span></a><a class="btn btn-line" href="#room-games">See what’s live</a></p>
+        </div>
+        <nav class="strip" aria-label="Room directory" data-fit><ol class="dir dir-strip" data-dir="strip"></ol></nav>
+      </section>
+
+      <!-- S1 THE CORRIDOR -->
+      <section class="corridor" id="rooms" aria-label="The rooms">
+        <!-- Rest points: each room's dwell (lobby door .54 + room index + .18 segments); proximity snapping only. -->
+        <i class="snap" style="--p:0.72"></i><i class="snap" style="--p:1.72"></i><i class="snap" style="--p:2.72"></i><i class="snap" style="--p:3.72"></i><i class="snap" style="--p:4.72"></i><i class="snap" style="--p:5.72"></i><i class="snap" style="--p:6.72"></i>
+        <div class="stage">
+          <div class="lobby" aria-hidden="true" data-theme="light"><div class="room-back"><div class="ly lobby-wall" data-d="1"><i></i></div></div></div>
+          <i class="ref ref-lobby" aria-hidden="true"><b></b></i><i class="ref ref-aa aa" aria-hidden="true"><b></b></i>
+          <!-- The door between rooms: script.js redraws these paths from scroll (frame, leaf, light), nothing is scaled. -->
+          <svg class="portal" aria-hidden="true" focusable="false"><defs><linearGradient id="dh" x2="1"><stop offset="0" stop-color="#000" stop-opacity=".55"/><stop offset="1" stop-color="#000" stop-opacity=".12"/></linearGradient><linearGradient id="ds" x2="0" y2="1"><stop offset="0" stop-color="#ffd3a6" stop-opacity=".9"/><stop offset=".6" stop-color="#fa5b3a" stop-opacity=".2"/><stop offset="1" stop-color="#fa5b3a" stop-opacity="0"/></linearGradient><radialGradient id="dg" cy=".62" r=".6"><stop offset="0" stop-color="#fff7e8"/><stop offset=".45" stop-color="#ffb489"/><stop offset="1" stop-color="#fa5b3a" stop-opacity="0"/></radialGradient></defs><path class="fl"/><path class="sp"/><path class="gl"/><path class="jb" id="jb" fill-rule="evenodd"/><path class="lf"/><path class="sh"/><use href="#jb"/><path class="pn"/><path class="kn"/></svg>
+
+          <!-- ═════════════════════════════════════════════════════════════════════
+               ROOM BLOCKS. One <article data-room> per room, in corridor order.
+               To add a room or open one: edit only its block.
+               data-status   live | wip | soon | open   (badges, doors, directory dots; open = available now as a service)
+               data-num / data-name / data-short / data-line   directory text
+               data-href / data-href-label   optional live link (shown in the directory)
+               data-theme    light | dark
+               style         --bg       room background            --ink    headings and body text
+                             --ink-2    secondary text (>=4.5:1)    --live   live-dot fill (>=3:1 on --bg)
+                             --line     dividers and chip outlines  --door   door frame   --sw   directory swatch
+                             --hdr-bg --hdr-ink   header backdrop and ink over this room
+                             --nav-ink --nav-bg --nav-lv   room navigator ink, backdrop (hover tooltip, reduced-motion scrim) and live
+                                        fill where the bottom-left differs from the header area (default: --hdr-ink, --hdr-bg, --live)
+                             --nav-sc   navigator scrim opacity in --nav-bg where art passes under it (default 0)
+                             --cta-bg --cta-ink   Start a project pill over this room
+                             --cut      no-JS phone split between copy and art (default 48%)
+                             --ax       art area start in 1920 units; the copy column ends one gap before it (default 960)
+                             --as       art-only shift in 1920 units, copy column unchanged (default 0)
+                             Status rings use the text colour, so every marker meets 3:1 wherever its text meets 4.5:1.
+               Art lives in .aa boxes (the art area), copy in .room-copy (the copy area).
+               A new room without its own art class still gets a lit, empty room.
+               ═════════════════════════════════════════════════════════════════════ -->
+
+          <!-- ROOM 01 · GAMES · Froppy Frog ─────────────────────────────────────── -->
+          <article class="room r-games" id="room-games" data-room data-status="live" data-theme="light" data-num="01" data-name="Games" data-short="Games" data-line="Froppy Frog, a pond adventure for iPhone and iPad." data-href="https://froppyfrog.oda.so/" data-href-label="froppyfrog.oda.so" style="--bg:#c3d4cc;--ink:#0c2620;--ink-2:#0c2620;--live:#0c2620;--line:#173b3459;--door:#173b34;--sw:#7fb547;--hdr-bg:#8ea9a4;--hdr-ink:#0c2620;--nav-ink:#eef3ea;--nav-bg:#0c2620;--nav-lv:#c8f063;--nav-sc:.8;--cta-bg:#c8f063;--cta-ink:#0c2620;--cut:50%" aria-labelledby="games-h">
+            <div class="room-back">
+              <div class="ly g-world" data-d="1" data-py="1"><i class="g-sun"></i><svg class="g-hills" viewBox="0 0 1600 360" preserveAspectRatio="none" aria-hidden="true"><path fill="#9ab68b" d="M0 196C170 146 318 170 474 138C640 104 770 168 934 150C1112 130 1262 88 1424 118C1508 133 1566 146 1600 154V360H0Z" /><path fill="#749a6c" d="M0 256C164 214 306 246 466 222C646 194 786 246 964 230C1146 214 1304 186 1600 218V360H0Z" /></svg><i class="rip" style="--x:14%;--y:79%;--dl:-1s"></i><i class="rip" style="--x:48%;--y:74%;--dl:-2.4s"></i><i class="rip" style="--x:79%;--y:86%;--dl:-.4s"></i><i class="rip" style="--x:33%;--y:91%;--dl:-3.2s"></i><i class="pad" style="--x:4%;--y:78%;--w:9em"></i><i class="pad" style="--x:56%;--y:86%;--w:11em"></i><i class="pad" style="--x:88%;--y:80%;--w:8em"></i></div>
+            </div>
+            <div class="room-front">
+              <div class="ly" data-d=".82" data-py="3" data-x="-30" data-y="12"><div class="aa"><div class="g-hop" data-ob data-fit><i class="pad"></i><img src="assets/work/froppy/hoppy-512.webp" srcset="assets/work/froppy/hoppy-320.webp 320w, assets/work/froppy/hoppy-512.webp 512w" sizes="(orientation: portrait) 46vw, 24vw" width="512" height="512" alt="Froppy, a green frog in a red bandana" decoding="async" /></div></div></div>
+              <i class="g-rain" aria-hidden="true"></i>
+              <div class="ly" data-d=".9" data-py="2" data-x="40"><div class="aa"><figure class="g-phone" data-ob data-fit><img src="assets/work/froppy/froppy-map-720.webp" srcset="assets/work/froppy/froppy-map-360.webp 360w, assets/work/froppy/froppy-map-720.webp 720w" sizes="(orientation: portrait) 40vw, 26vw" width="720" height="1566" alt="Froppy Frog adventure map: Level 222 on the Lotus Garden course" decoding="async" /><figcaption data-fit>Real in-game screen</figcaption></figure></div></div>
+            </div>
+            <div class="room-copy">
+              <div class="tag" data-fit><span class="tag-n">01</span><h2 id="games-h" class="room-h">Games</h2><span class="badge"></span></div>
+              <h3 class="g-title" data-fit>Froppy Frog</h3>
+              <p class="lede" data-fit>A little frog. A very big dream.</p>
+              <p data-fit>Hop across changing ponds on iPhone and iPad.</p>
+              <p class="room-cta" data-fit><a class="btn btn-ink" href="https://froppyfrog.oda.so/" target="_blank" rel="noopener">Visit froppyfrog.oda.so <span aria-hidden="true">↗</span><span class="vh"> (opens in a new tab)</span></a></p>
+            </div>
+          </article>
+
+          <!-- ROOM 02 · APPS & WEB · in the works ─────────────────────────────────────── -->
+          <article class="room r-apps" id="room-apps" data-room data-status="wip" data-theme="light" data-num="02" data-name="Apps &amp; Web" data-short="Apps &amp; Web" data-line="Mobile apps and web products, in the works." style="--bg:#eceff0;--ink:#15202c;--ink-2:#15202c;--live:#dc4420;--line:#15202c40;--door:#15202c;--sw:#cfdbe2;--hdr-ink:#15202c;--cta-bg:#15202c;--cta-ink:#eceff0;--cut:46%" aria-labelledby="apps-h">
+            <div class="room-back">
+              <div class="ly a-paper" data-d="1"><i class="a-minor"></i><i class="a-major"></i></div>
+            </div>
+            <div class="room-front">
+              <div class="ly" data-d=".92" data-py="2" data-x="34" aria-hidden="true"><div class="aa"><div class="a-slots" data-slots data-ob data-fit></div></div></div>
+            </div>
+            <div class="room-copy">
+              <p class="tag" data-fit><span class="tag-n">02</span><span class="badge"></span></p>
+              <h2 id="apps-h" class="room-h" data-fit>Apps &amp; Web</h2>
+              <!-- The project count is this one value (data-apps); the drawn slots follow it. -->
+              <p class="lede" data-fit><b class="apps-n" data-apps="3"></b> projects on the go. Names under wraps.</p>
+              <p class="note" data-fit>Each one gets its own door when it is ready to open.</p>
+            </div>
+          </article>
+
+          <!-- ROOM 03 · AI CHARACTERS · opening soon ────────────────────────────── -->
+          <article class="room r-chars" id="room-characters" data-room data-status="soon" data-theme="dark" data-num="03" data-name="AI Characters" data-short="Characters" data-line="Virtual characters with a point of view." style="--bg:#151022;--ink:#ece7f7;--ink-2:#cfc6ea;--live:#b9a8f0;--line:#ece7f740;--door:#2c2244;--sw:#3a2d5c;--hdr-ink:#ece7f7;--cta-bg:#b9a8f0;--cta-ink:#151022;--cut:46%" aria-labelledby="chars-h">
+            <div class="room-back">
+              <div class="ly c-void" data-d="1"><i class="c-floor"></i></div>
+            </div>
+            <div class="room-front">
+              <div class="ly" data-d=".92" data-py="2" data-x="36" aria-hidden="true"><div class="aa"><div class="c-frame" data-ob data-fit><i class="c-band" style="--i:0;--dx:-74"><b></b></i><i class="c-band" style="--i:1;--dx:52"><b></b></i><i class="c-band" style="--i:2;--dx:-36"><b></b></i><i class="c-band" style="--i:3;--dx:88"><b></b></i><i class="c-band" style="--i:4;--dx:-58"><b></b></i><i class="c-band" style="--i:5;--dx:30"><b></b></i><i class="c-band" style="--i:6;--dx:-90"><b></b></i><i class="c-band" style="--i:7;--dx:64"><b></b></i><i class="c-scan"></i></div></div></div>
+            </div>
+            <div class="room-copy">
+              <p class="tag" data-fit><span class="tag-n">03</span><span class="badge"></span></p>
+              <h2 id="chars-h" class="room-h" data-fit>AI Characters</h2>
+              <p class="lede" data-fit>Virtual characters with a point of view.</p>
+              <p class="note" data-fit>The portrait stays empty until the first character is ready to meet you.</p>
+            </div>
+          </article>
+
+          <!-- ROOM 04 · PRODUCTION · opening soon ───────────────────────────────── -->
+          <article class="room r-prod" id="room-production" data-room data-status="soon" data-theme="dark" data-num="04" data-name="Production" data-short="Production" data-line="AI video, ads &amp; commercial production." style="--as:30;--bg:#170d07;--ink:#f6e6d1;--ink-2:#ead2b4;--live:#f0a64a;--line:#f6e6d166;--door:#3b2414;--sw:#e08a2e;--hdr-ink:#f6e6d1;--cta-bg:#f0a64a;--cta-ink:#170d07;--cut:52%" aria-labelledby="prod-h">
+            <div class="room-back">
+              <div class="ly p-dark" data-d="1"><div class="aa"><div class="f-strip"><i></i><i></i><i></i><i></i><i></i><i></i></div></div></div>
+            </div>
+            <div class="room-front">
+              <div class="ly" data-d=".9" data-py="2" data-x="30" aria-hidden="true"><div class="aa"><div class="p-slate" data-ob data-fit><i class="p-clap"></i><p><span>Prod.</span>ODA</p><p><span>Scene</span><b class="odo" data-odo="s"><i><b>0123456789</b></i><i><b>0123456789</b></i></b><span>Take</span><b class="odo" data-odo="t"><i><b>0123456789</b></i></b></p></div><div class="p-view" data-ob data-fit><i style="--sx:-1;--sy:-1;--r:0deg"></i><i style="--sx:1;--sy:-1;--r:90deg"></i><i style="--sx:1;--sy:1;--r:180deg"></i><i style="--sx:-1;--sy:1;--r:270deg"></i><b class="p-ar" data-ar>16:9</b></div><div class="p-time" data-ob data-fit><i class="p-trk"><b style="--l:4;--w:30"></b><b style="--l:38;--w:22"></b><b style="--l:64;--w:30"></b></i><i class="p-trk" style="--c:#7a3b1a"><b style="--l:14;--w:40"></b><b style="--l:58;--w:16"></b></i><i class="p-trk" style="--c:#f6e6d14d"><b style="--l:2;--w:58"></b><b style="--l:64;--w:34"></b></i><i class="p-head"></i></div></div></div>
+              <i class="f-leak" aria-hidden="true"></i>
+            </div>
+            <div class="room-copy">
+              <p class="tag" data-fit><span class="tag-n">04</span><span class="badge"></span></p>
+              <h2 id="prod-h" class="room-h" data-fit>Production</h2>
+              <p class="lede" data-fit>AI video, ads &amp; commercial production.</p>
+              <p class="note" data-fit>From prompt to final cut — AI video, ads, commercial shoots and content at scale.</p>
+              <ul class="caps" data-fit><li>AI video</li><li>Ad creative</li><li>Commercial film</li><li>Shoots</li><li>Key visuals</li><li>Content at scale</li></ul>
+            </div>
+          </article>
+
+          <!-- ROOM 05 · SOCIAL · live ───────────────────────────────────── -->
+          <article class="room r-social" id="room-social" data-room data-status="live" data-theme="light" data-num="05" data-name="Social" data-short="Social" data-line="Content built for the feed, not against it." style="--bg:#fa5b3a;--ink:#181918;--ink-2:#181918;--live:#fff;--line:#18191866;--door:#181918;--sw:#fa5b3a;--hdr-ink:#181918;--cta-bg:#181918;--cta-ink:#fff3ea;--cut:54%" aria-labelledby="social-h">
+            <div class="room-back">
+              <div class="ly s-ground" data-d="1"><i></i></div>
+            </div>
+            <div class="room-front">
+              <div class="ly" data-d=".9" data-x="44" aria-hidden="true"><div class="aa s-feed" data-fit><div class="s-col" style="--r:1;--o:6" data-ob><i class="s-fr s-cream">hook</i><i class="s-fr s-ink">loop</i><i class="s-fr s-deep">story</i><i class="s-fr s-peach">hook</i></div><div class="s-col" style="--r:1.5;--o:-26" data-ob><i class="s-fr s-ink">story</i><i class="s-fr s-peach">hook</i><i class="s-fr s-cream">loop</i><i class="s-fr s-deep">story</i></div><div class="s-col" style="--r:.7;--o:16" data-ob><i class="s-fr s-deep">loop</i><i class="s-fr s-cream">story</i><i class="s-fr s-ink">hook</i><i class="s-fr s-peach">loop</i></div></div></div>
+            </div>
+            <div class="room-copy">
+              <p class="tag" data-fit><span class="tag-n">05</span><span class="badge"></span></p>
+              <h2 id="social-h" class="room-h" data-fit>Social</h2>
+              <p class="lede" data-fit>Content built for the feed, not against it.</p>
+              <p class="note" data-fit>We run channels end to end — concept, production, posting and growth.</p>
+              <!-- Stats render from data-value only. An empty data-value renders nothing: add a verified number here, never an estimate. -->
+              <div class="stats" data-fit>
+                <div class="stat" data-stat="views-yalla" data-value="2500000" data-label="views" data-caption="on @yalla.mubarak"></div>
+                <div class="stat" data-stat="accounts" data-value="" data-label="accounts managed"></div>
+                <div class="stat" data-stat="followers" data-value="" data-label="followers across accounts"></div>
+                <div class="stat" data-stat="views-total" data-value="" data-label="views across accounts"></div>
+              </div>
+            </div>
+          </article>
+
+          <!-- ROOM 06 · DESIGN · opening soon ───────────────────────────────────── -->
+          <article class="room r-design" id="room-design" data-room data-status="soon" data-theme="light" data-num="06" data-name="Design" data-short="Design" data-line="Identity, posters and visual systems." style="--bg:#f1ece2;--ink:#191919;--ink-2:#191919;--live:#dc4420;--line:#19191940;--door:#191919;--sw:#2547d0;--hdr-ink:#191919;--cta-bg:#fa5b3a;--cta-ink:#181918;--cut:46%" aria-labelledby="design-h">
+            <div class="room-back">
+              <div class="ly d-paper" data-d="1"><div class="aa"><i class="reg"></i><i class="reg"></i><i class="reg"></i><i class="reg"></i></div></div>
+            </div>
+            <div class="room-front">
+              <div class="ly" data-d=".9" data-py="2" data-x="30" aria-hidden="true"><div class="aa"><i class="d-circle"></i><span class="d-type" data-ob data-fit>Design</span><div class="d-sw" data-ob data-fit><i style="--c:#181918;--sx:-180;--sy:-120;--sr:-24"></i><i style="--c:#fa5b3a;--sx:60;--sy:-210;--sr:18"></i><i style="--c:#2547d0;--sx:210;--sy:-90;--sr:-12"></i><i style="--c:#f4c430;--sx:-240;--sy:40;--sr:30"></i><i style="--c:#fffdf8;--sx:20;--sy:30;--sr:-40"></i><i style="--c:#2e8b57;--sx:230;--sy:60;--sr:22"></i><i style="--c:#f2a7b5;--sx:-150;--sy:220;--sr:-16"></i><i style="--c:#8cc7e8;--sx:40;--sy:250;--sr:34"></i><i style="--c:#fa5b3a;--sx:190;--sy:200;--sr:-28"></i></div></div></div>
+            </div>
+            <div class="room-copy">
+              <p class="tag" data-fit><span class="tag-n">06</span><span class="badge"></span></p>
+              <h2 id="design-h" class="room-h" data-fit>Design</h2>
+              <p class="lede" data-fit>Identity, posters and visual systems.</p>
+              <p class="note" data-fit>The grid is set. The wall is waiting.</p>
+            </div>
+          </article>
+          <!-- ROOM 07 · AI CONSULTING · open, available now as a service. The thinking room: loose notes resolve into a map of the other rooms. -->
+          <article class="room r-cons" id="room-consulting" data-room data-status="open" data-theme="light" data-num="07" data-name="AI Consulting" data-short="Consulting" data-line="Not sure which room your idea needs? Start here." style="--ax:1300;--bg:#e8e3d8;--ink:#23211d;--ink-2:#45413a;--live:#dc4420;--line:#23211d45;--door:#23211d;--sw:#8b8478;--hdr-ink:#23211d;--cta-bg:#fa5b3a;--cta-ink:#181918;--cut:60%" aria-labelledby="cons-h">
+            <div class="room-back">
+              <div class="ly k-paper" data-d="1"></div>
+            </div>
+            <div class="room-front">
+              <div class="ly" data-d=".9" data-py="2" data-x="30" aria-hidden="true"><div class="aa"><svg class="k-map" data-ob data-fit viewBox="0 0 640 440" aria-hidden="true"><g class="k-sk" fill="none" stroke="#6f695f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path pathLength="1" d="M142 176c30-36 98-36 124 6 24 40 0 92-56 100-52 8-96-22-94-66 1-30 24-52 54-60"/><path pathLength="1" d="M36 64c8-10 16 8 24-2s14-10 22 0 14 6 22-4 12-8 20 0 12 6 18-2"/><path pathLength="1" d="M36 94c10-8 16 6 26-2s14-8 22 0 14 4 22-4 10-4 16 2"/><path pathLength="1" d="M36 124c8-8 16 6 24-2s16-6 22 2"/><path pathLength="1" d="M222 66c-2-18 28-22 32-4 3 14-16 18-16 34m0 14v1"/><path pathLength="1" d="M276 250c34 6 64-10 92-40m-24 2 26-4-2 26"/><path pathLength="1" d="M58 336l18-14 14 16 16-16 14 16 16-16"/><path pathLength="1" d="M110 300c30 14 74 14 106-4"/></g><g class="k-st" fill="none" stroke="#23211d" stroke-width="2" stroke-linecap="round"><circle pathLength="1" cx="190" cy="220" r="46"/><path pathLength="1" d="M236 220C322 220 330 54 410 54"/><path pathLength="1" d="M236 220C322 220 330 120 410 120"/><path pathLength="1" d="M236 220C322 220 330 186 410 186"/><path pathLength="1" d="M236 220C322 220 330 252 410 252"/><path pathLength="1" d="M236 220C322 220 330 318 410 318"/><path pathLength="1" d="M236 220C322 220 330 384 410 384"/></g><text class="k-idea" x="190" y="227" text-anchor="middle">idea</text><g class="k-d" style="--k:1"><rect x="410" y="34" width="40" height="40" rx="12" fill="#23211d"/><rect x="420" y="44" width="20" height="20" rx="6" fill="#7fb547"/><text class="k-lb" x="464" y="60">01 Games</text></g><g class="k-d" style="--k:2"><rect x="410" y="100" width="40" height="40" rx="12" fill="#23211d"/><rect x="420" y="110" width="20" height="20" rx="6" fill="#9fb7c6"/><text class="k-lb" x="464" y="126">02 Apps &amp; Web</text></g><g class="k-d" style="--k:3"><rect x="410" y="166" width="40" height="40" rx="12" fill="#23211d"/><rect x="420" y="176" width="20" height="20" rx="6" fill="#9b87e0"/><text class="k-lb" x="464" y="192">03 AI Characters</text></g><g class="k-d" style="--k:4"><rect x="410" y="232" width="40" height="40" rx="12" fill="#23211d"/><rect x="420" y="242" width="20" height="20" rx="6" fill="#e08a2e"/><text class="k-lb" x="464" y="258">04 Production</text></g><g class="k-d" style="--k:5"><rect x="410" y="298" width="40" height="40" rx="12" fill="#23211d"/><rect x="420" y="308" width="20" height="20" rx="6" fill="#fa5b3a"/><text class="k-lb" x="464" y="324">05 Social</text></g><g class="k-d" style="--k:6"><rect x="410" y="364" width="40" height="40" rx="12" fill="#23211d"/><rect x="420" y="374" width="20" height="20" rx="6" fill="#2547d0"/><text class="k-lb" x="464" y="390">06 Design</text></g></svg></div></div>
+            </div>
+            <div class="room-copy">
+              <p class="tag" data-fit><span class="tag-n">07</span><span class="badge"></span></p>
+              <h2 id="cons-h" class="room-h" data-fit>AI Consulting</h2>
+              <p class="lede" data-fit>Not sure which room your idea needs? Start here.</p>
+              <p class="note" data-fit>We help teams find where AI actually fits — then design and build it with you.</p>
+              <ul class="caps" data-fit><li>AI strategy</li><li>Use-case discovery</li><li>Tool &amp; model selection</li><li>Workflow automation</li><li>Prototypes &amp; pilots</li><li>Team training</li></ul>
+              <p class="room-cta" data-fit><a class="cta" href="mailto:hello@oda.so"><span class="door-o sm" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><b></b></span><span class="cta-l">Book a conversation</span><span class="cta-a" aria-hidden="true">↗</span></a></p>
+            </div>
+          </article>
+          <!-- END ROOM BLOCKS -->
+        </div>
+      </section>
+
+      <!-- S2 DIRECTORY -->
+      <section class="index" id="index" aria-labelledby="index-h">
+        <div class="index-head"><h2 id="index-h" data-fit>All rooms</h2><p data-fit>Every discipline gets its own room. Doors open as the work ships.</p></div>
+        <ol class="index-list" data-dir="index"></ol>
+      </section>
+
+      <!-- S3 STUDIO -->
+      <section class="studio" id="studio" aria-labelledby="studio-h">
+        <p class="studio-def" data-fit><span lang="tr">oda</span> <em>noun, Turkish</em> a room; a space set apart for something.</p>
+        <h2 id="studio-h" data-fit>ODA is Turkish for room<span class="c">.</span></h2>
+        <div class="studio-body">
+          <p data-fit>We are a small, independent studio in Istanbul, working worldwide. Design and technology share the same room here, so every idea gets a space built around it.</p>
+          <p class="studio-loc" data-fit><span>Istanbul, Türkiye</span><span>Working worldwide</span></p>
+        </div>
+      </section>
+
+      <!-- S4 CLOSING -->
+      <section class="closing" id="contact" aria-labelledby="closing-h">
+        <h2 id="closing-h" data-fit><span>There’s always a room</span> <span>for your idea<span class="c">.</span></span></h2>
+        <p class="closing-cta" data-fit><a class="cta cta-lg" href="mailto:hello@oda.so"><span class="door-o sm" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><b></b></span><span class="cta-l">Start a project</span><span class="cta-h" aria-hidden="true">hello@oda.so</span><span class="cta-a" aria-hidden="true">↗</span></a></p>
+        <div class="closing-mark" aria-hidden="true"><span class="cm" data-fit><span class="door-o"><i></i><i></i><i></i><i></i><i></i><i></i><b></b></span>da<span class="dot">.</span></span></div>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <div class="foot-l" data-fit><a class="mark" href="#top" aria-label="ODA home"><span class="door-o sm" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><b></b></span><span aria-hidden="true">da<span class="dot">.</span></span></a><span>© 2026 ODA · Istanbul / Worldwide</span></div>
+      <div class="foot-r" data-fit><a href="https://froppyfrog.oda.so/" target="_blank" rel="noopener">Froppy Frog <span aria-hidden="true">↗</span><span class="vh"> (opens in a new tab)</span></a><button class="rm" type="button" aria-pressed="false" data-rm>Reduce motion</button><a href="#top">Back to top <span aria-hidden="true">↑</span></a></div>
+    </footer>
+  </body>
 </html>
