@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied'});gtag('js',new Date());gtag('config','G-FPZPVMTZCR');</script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}var odaC;try{odaC=localStorage.getItem('oda-consent')}catch(e){}gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:odaC==='granted'?'granted':'denied'});gtag('js',new Date());gtag('config','G-FPZPVMTZCR');</script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FPZPVMTZCR"></script>
     <title>ODA — Every idea gets its own room</title>
     <meta name="description" content="ODA is an independent studio in Istanbul building games, mobile apps and web products, and making creative work with AI." />
@@ -247,7 +247,12 @@
 
     <footer class="foot">
       <div class="foot-l" data-fit><a class="mark" href="#top" aria-label="ODA home"><span class="door-o sm" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><b></b></span><span aria-hidden="true">da<span class="dot">.</span></span></a><span>© 2026 ODA · Istanbul / Worldwide</span></div>
-      <div class="foot-r" data-fit><a href="https://froppyfrog.oda.so/" target="_blank" rel="noopener">Froppy Frog <span aria-hidden="true">↗</span><span class="vh"> (opens in a new tab)</span></a><button class="rm" type="button" aria-pressed="false" data-rm>Reduce motion</button><a href="#top">Back to top <span aria-hidden="true">↑</span></a></div>
+      <div class="foot-r" data-fit><a href="https://froppyfrog.oda.so/" target="_blank" rel="noopener">Froppy Frog <span aria-hidden="true">↗</span><span class="vh"> (opens in a new tab)</span></a><button class="rm" type="button" aria-pressed="false" data-rm>Reduce motion</button><button class="rm" type="button" data-consent-open>Cookies</button><a href="#top">Back to top <span aria-hidden="true">↑</span></a></div>
     </footer>
+      <section class="consent" role="region" aria-label="Cookie consent" data-consent hidden>
+      <p>We use Google Analytics cookies to see how people find ODA. No ads, no cross-site tracking.</p>
+      <div class="consent-b"><button type="button" data-consent-set="granted">Accept</button><button type="button" data-consent-set="denied">Decline</button></div>
+    </section>
+    <script>(function(){var b=document.querySelector('[data-consent]');if(!b)return;function g(){try{return localStorage.getItem('oda-consent')}catch(e){return null}}function set(v){try{localStorage.setItem('oda-consent',v)}catch(e){}if(window.gtag)gtag('consent','update',{analytics_storage:v});b.hidden=true}if(!g())b.hidden=false;b.addEventListener('click',function(e){var t=e.target.closest('[data-consent-set]');if(t)set(t.getAttribute('data-consent-set'))});var o=document.querySelector('[data-consent-open]');if(o)o.addEventListener('click',function(){b.hidden=false;var f=b.querySelector('button');if(f)f.focus()})})();</script>
   </body>
 </html>
